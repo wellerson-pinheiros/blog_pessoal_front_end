@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthContext"
 
 
 const Nav = () => {
 
-    
+    const navigate = useNavigate()
+
+    const {handleLogout} = useContext(AuthContext)
+
+    function logout (){
+      handleLogout()
+      alert('O usuario foi desconectado com sucesso')
+      navigate('/')
+    }
 
 
   return (
