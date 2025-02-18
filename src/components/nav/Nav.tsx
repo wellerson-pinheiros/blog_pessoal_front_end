@@ -24,8 +24,13 @@ const Nav = () => {
     <div>
     <ul className='flex gap-3'>
         <li ><a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#">Postagens</a></li>
-        <li> <a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#">Cadastrar Tema</a></li>
+
+        <Link to='/temas' className='hover:underline hover:drop-shadow-[2px_2px_4px_red] hover:text-red-500'>Temas</Link>
+
+        <Link to='/cadastrartema' className='hover:underline hover:drop-shadow-[2px_2px_4px_red] hover:text-red-500'>Cadastrar tema</Link>
+
         <li> <a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#"> Perfil </a></li>
+
         <li><a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#">Sair</a></li>
     </ul>
     </div>

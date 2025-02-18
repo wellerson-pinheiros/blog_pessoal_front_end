@@ -1,7 +1,8 @@
 
 import { createContext, ReactNode, useState } from "react";
 import UsuarioLogin from "../models/UsuarioLogin";
-import { login } from "../services/Service";
+import { login } from "../models/services/Service";
+
 
 interface AuthContextProps {
     usuario: UsuarioLogin
@@ -29,7 +30,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     async function handleLogin(UsuarioLogin: UsuarioLogin) {
         setIsLoading(true)
         try{
-            await login('/usuario/logar', UsuarioLogin, setUsuario)
+            await login('/usuarios/logar', UsuarioLogin, setUsuario)
             alert('O Usúario foi autenticado com sucesso!')
         }catch(error){
             alert('Os dados do Usuario estão incompativeis')
