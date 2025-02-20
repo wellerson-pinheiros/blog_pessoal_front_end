@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div id='Pai'className=" w-full  bottom-0 left-0 flex flex-col items-center justify-center bg-indigo-900 " >
         <div id='filho'>
-           <h3 className="font-bold text-white">
+           <h3 className="font-bold text-white ">
                 Brog Pessoal|Wellerson Pinheiros|Copyrigth: 2025
            </h3>
         </div>
