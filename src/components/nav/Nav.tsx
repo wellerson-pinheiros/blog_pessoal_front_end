@@ -29,7 +29,7 @@ const Nav = () => {
 
         <Link to='/cadastrartema' className='hover:underline hover:drop-shadow-[2px_2px_4px_red] hover:text-red-500'>Cadastrar tema</Link>
 
-        <li> <a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#"> Perfil </a></li>
+        <li className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] hover:underline " >  <Link to='/perfil'>Perfil</Link> </li>
 
         <li><a className=" text-white hover:text-red-500 hover:drop-shadow-[2px_2px_4px_red] " href="#">Sair</a></li>
     </ul>
