@@ -2,6 +2,7 @@
 import { createContext, ReactNode, useState } from "react";
 import UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../models/services/Service";
+import { ToastAlerta } from "../utils/ToustAlerta";
 
 
 interface AuthContextProps {
@@ -31,9 +32,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setIsLoading(true)
         try{
             await login('/usuarios/logar', UsuarioLogin, setUsuario)
-            alert('O Usúario foi autenticado com sucesso!')
+            ToastAlerta('O Usúario foi autenticado com sucesso!', "sucesso")
         }catch(error){
-            alert('Os dados do Usuario estão incompativeis')
+            ToastAlerta('Os dados do Usuario estão incompativeis', "erro")
         } 
         setIsLoading(false)
     }

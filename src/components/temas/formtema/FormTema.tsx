@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext"
 import Tema from "../../../models/Tema"
 import { atualizar, buscar, cadastrar } from "../../../models/services/Service"
 import { RotatingLines } from "react-loader-spinner"
+import { ToastAlerta } from "../../../utils/ToustAlerta"
 
 function FormTema() {
 
@@ -70,12 +71,12 @@ function FormTema() {
                 await cadastrar('/tema', tema, setTema, {
                     headers: { Authorization: token }
                 })
-                alert('O Tema foi cadastrado com sucesso!')
+                ToastAlerta('O Tema foi cadastrado com sucesso!','sucesso')
             } catch (error: any) {
                 if (error.toString().includes("401")) {
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrar o tema!')
+                    ToastAlerta('Erro ao cadastrar o tema!',"erro")
                 }
             }
         }
