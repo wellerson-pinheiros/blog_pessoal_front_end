@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Meu Blog Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu blog pessoal, um projeto desenvolvido para compartilhar ideias, experiências e aprendizados.  desenvolvido com React e TypeScript, utilizando diversas bibliotecas para otimização e melhoria da experiência do usuário.
 
-Currently, two official plugins are available:
+# Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Front-end
 
-## Expanding the ESLint configuration
+React com TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Phosphor Icons (para ícones)
 
-- Configure the top-level `parserOptions` property like this:
+React Loader (para carregamentos dinâmicos)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+JWT (para autenticação segura)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Back-end
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Next.js com TypeScript
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+PostgreSQL (banco de dados relacional)
+
+ORM para interação com o banco de dados
+
+Autenticação com JWT (JSON Web Token)
+
+Como Rodar o Projeto
+
+# Requisitos
+
+Certifique-se de ter instalado:
+
+Node.js (versão mais recente recomendada)
+
+PostgreSQL (configurado e rodando)
+
+Gerenciador de pacotes (npm ou yarn)
+
+Configuração
+
+Clone o repositório:
+
+git clone: https://github.com/wellerson-pinheiros/BrogPessoal-Front.git
+
+
+# Instale as dependências:
+
+npm install
+
+ou
+
+yarn install
+
+Configure as variáveis de ambiente no arquivo .env:
+
+DATABASE_URL=postgresql://usuario:senha@localhost:5432/seubanco
+JWT_SECRET=sua_chave_secreta
+
+Rode as migrações do banco de dados:
+
+npm run migrate
+
+Inicie o servidor:
+
+npm run dev
+
+
+# Funcionalidades
+
+Cadastro e login com autenticação JWT
+
+Postagens e edição de conteúdo
+
+Interface responsiva e dinâmica
+
+Indicadores de carregamento e feedback ao usuário
+
+Contribuição
+
+Fique à vontade para abrir issues e pull requests caso queira contribuir com melhorias!
+
+# Licença
+
+Este projeto está licenciado sob a MIT License.
+   
+
